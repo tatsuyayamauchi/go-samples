@@ -16,6 +16,40 @@ func main() {
 	MapSample()
 }
 
+// Result
+/*
+run SliceSample
+[a b c]
+a
+b
+c
+[a b c]
+0 a
+1 b
+2 c
+2 c
+1 b
+0 a
+[a b c a b c]
+[a b]
+[c a]
+[b c]
+
+run MapSample
+map[a:1 b:2 c:3]
+c 3
+a 1
+b 2
+map[a:1 b:2 c:3]
+a
+b
+c
+1
+2
+3
+map[a:1 b:2 c:3 d:4 e:5]
+*/
+
 func SliceSample() {
 	hoge := []string{"a", "b", "c"}
 	fmt.Println(hoge)
