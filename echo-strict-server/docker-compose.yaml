@@ -1,0 +1,10 @@
+services:
+  swagger-ui:
+    # https://github.com/swagger-api/swagger-ui/blob/v5.17.14/docs/usage/configuration.md
+    image: swaggerapi/swagger-ui:v5.17.14
+    volumes:
+      - ./swagger.yaml:/openapi.yaml
+    environment:
+      SWAGGER_JSON: /openapi.yaml
+    ports:
+      - "3030:8080"
