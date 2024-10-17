@@ -9,6 +9,9 @@ import (
 	"google.golang.org/grpc/test/bufconn"
 )
 
+// net.Listener の実装を満たしている
+var _ net.Listener = (*bufconn.Listener)(nil)
+
 func NewServer(l *bufconn.Listener, msg string) *http.Server {
 	return &http.Server{
 		Addr: l.Addr().String(),
